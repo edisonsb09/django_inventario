@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedores</title>
+    <link rel="stylesheet" href="{% static 'css/proveedor.css' %}">
+</head>
+<body>
+
+<div class="container">
+    
+
+    <!-- Listado de proveedores -->
+    <section id="proveedores">
+        <a id="enlace-login" href="{% url 'menu' %}  ">REGRESAR</a>
+        <h2>Listado de Proveedores</h2>
+        <div class="proveedor">
+            <h3>Proveedor 1</h3>
+            <p>Dirección: Dirección 1</p>
+            <p>Contacto: Contacto 1</p>
+            <p>Productos: Producto 1, Producto 2</p>
+            <!-- ... -->
+        </div>
+        <!-- ... -->
+    </section>
+
+    <!-- Formulario -->
+    <section id="formulario">
+        <h2>Formulario para añadir/editar proveedores</h2>
+        <form action="procesar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="contacto">Contacto:</label>
+            <input type="text" id="contacto" name="contacto" required>
+
+            <label for="productos">Productos:</label>
+            <input type="text" id="productos" name="productos" required>
+
+            <input type="submit" value="Guardar">
+        </form>
+    </section>
+
+    <!-- Historial de compras -->
+    <section id="historial">
+        <h2>Historial de compras por proveedor</h2>
+        <div class="historial-item">
+            <h3>Proveedor 1</h3>
+            <p>Fecha: 01/01/2024 - Producto comprado: Producto 1</p>
+            <!-- ... -->
+        </div>
+        <!-- ... -->
+    </section>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Sistema de Proveedor</p>
+    </div>
+</footer>
+</body>
+</html>

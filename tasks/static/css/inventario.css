@@ -1,0 +1,25 @@
+body {
+    background-color: #00ced1; /* Verde Agua */
+    margin: 0;
+    padding: 0;
+}
+
+#titulo {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 5px solid #000; /* Borde Superior Negro */
+    color: #cd1919; /* Color del texto */
+}
+
+#enlace-login {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: #000; /* Color del enlace */
+}
+
+#imagen {
+    text-align: center;
+}

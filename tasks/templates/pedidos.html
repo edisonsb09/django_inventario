@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/pedidos.css' %}">
+    <title>Sistema de Pedidos</title>
+</head>
+<body>
+  
+
+    <header>
+        <div class="container">
+            <a id="enlace-login" href="{% url 'menu' %}  ">REGRESAR</a>
+            <h1>Sistema de Pedidos</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="pedidos-listado">
+            <h2>Listado de Pedidos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Productos</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Fecha</th>
+                        <th>Estado del Pedido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de datos de pedidos -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="formulario-pedido">
+            <h2>Formulario de Pedido</h2>
+            <form id="pedido-form">
+                <div class="form-group">
+                    <label for="cliente">Cliente:</label>
+                    <input type="text" id="cliente" name="cliente" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productos">Productos:</label>
+                    <textarea id="productos" name="productos" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="total">Total:</label>
+                    <input type="text" id="total" name="total" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="estado">Estado del Pedido:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="enviado">Enviado</option>
+                        <option value="entregado">Entregado</option>
+                    </select>
+                </div>
+
+                <button type="button" class="form-btn btn-save" onclick="guardarPedido()">Guardar</button>
+
+            </form>
+        </section>
+
+        <section id="historial-pedidos">
+            <h2>Historial de Pedidos por Cliente</h2>
+            <!-- Aquí va el historial de pedidos por cliente -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sistema de Pedidos</p>
+        </div>
+    </footer>
+</body>
+</html>

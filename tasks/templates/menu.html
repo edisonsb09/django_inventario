@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+
+    <!-- Agregar jQuery -->
+    
+
+</head>
+
+<body>
+
+    <div id="sidebar">
+        <a href="{% url 'producto' %}"><button>Producto</button></a>
+        <a href="{% url 'pedidos' %}"><button>Pedidos</button></a>
+        <a href="{% url 'cliente' %}"><button>Cliente</button></a>
+        <a href="{% url 'proveedor' %}"><button>Proveedor</button></a>
+
+   
+
+        
+    </div>
+
+    <div id="content">
+        <!-- Contenido de la página principal -->
+        <h2>Bienvenidos a todos</h2>
+        <div id="contenidoDinamico">
+            <!-- Aquí se cargará el contenido dinámico -->
+        </div>
+    </div>
+    
+
+    <!-- Enlazar el archivo JavaScript -->
+  
+
+    
+ 
+</body>
+
+</html>

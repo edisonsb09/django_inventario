@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inventario</title>
+    <link rel="stylesheet" href="{% static 'css/inventario.css' %}">
+   
+</head>
+
+<body>
+    <div id="titulo">
+        <h1>Sistema de Inventario</h1>
+    </div>
+
+    <a id="enlace-login" href="{% url 'login' %}">Iniciar Sesión</a>
+
+    <div id="imagen">
+        <!-- Sustituye 'URL_DE_LA_IMAGEN' con la URL real de tu imagen -->
+
+        
+        <img src="{% static 'img/IM.png' %}" >
+    </div>
+</body>
+
+</html>

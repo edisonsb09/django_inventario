@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Inventario para la gestión de productos.">
+    <title>Productos - Sistema de Inventario</title>
+    <link rel="stylesheet" href="{% static 'css/producto.css' %}">
+</head>
+
+<body>
+    
+       
+    
+    <div class="products-container">
+        <a id="enlace-login" href="{% url 'menu' %}  ">REGRESAR</a>
+        <!-- Listado de productos -->
+        <section class="products-list">
+            <h2>Listado de Productos</h2>
+            <input type="text" placeholder="Buscar producto..." class="search-input">
+            <ul class="product-items">
+                <li class="product-item">
+                    <h3>Producto A</h3>
+                    <p>Descripción: Detalles del producto A</p>
+                    <p>Precio: $50</p>
+                    <p>Stock: 100</p>
+                    <div class="product-actions">
+                        <button class="btn edit-btn">Editar</button>
+                        <button class="btn delete-btn">Eliminar</button>
+                    </div>
+                </li>
+                <!-- ... otros productos ... -->
+            </ul>
+        </section>
+
+        <!-- Formulario para añadir/editar productos -->
+        <h2>Formulario Para Agregar Productos</h2>
+        <form id="productForm">
+            <label for="productName">Nombre del Producto:</label>
+            <input type="text" id="productName" name="productName" placeholder="Ingrese el nombre del producto" required>
+
+            <label for="productDescription">Descripción:</label>
+            <textarea id="productDescription" name="productDescription" placeholder="Ingrese la descripción del producto" rows="4" required></textarea>
+
+            <label for="productPrice">Precio:</label>
+            <input type="number" id="productPrice" name="productPrice" min="0" step="0.01" placeholder="Ingrese el precio" required>
+
+            <label for="productStock">Stock:</label>
+            <input type="number" id="productStock" name="productStock" min="0" placeholder="Ingrese la cantidad en stock" required>
+
+            <button type="button" class="form-btn btn-save" onclick="guardarProducto()">Guardar</button>
+        </form>
+
+        <!-- Opciones de importación/exportación -->
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sistema de Producto</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/cliente.css' %}">
+    <title>Sistema de Gestión de Clientes</title>
+</head>
+<body>
+  
+
+    <header>
+        <a id="enlace-login" href="{% url 'menu' %}  ">REGRESAR</a>
+        <h1>Sistema de Gestión de Clientes</h1>
+    </header>
+
+    <section>
+        <h2>Listado de Clientes</h2>
+        <table id="clientesTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Información de Contacto</th>
+                    <th>Historial de Compras</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí irán las filas con la información de los clientes -->
+            </tbody>
+        </table>
+
+        <h2>Formulario Para Agregar Clientes</h2>
+        <form id="clienteForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="contacto">Información de Contacto:</label>
+            <input type="text" id="contacto" name="contacto" required>
+
+            <label for="historial">Historial de Compras:</label>
+            <textarea id="historial" name="historial" rows="4"></textarea>
+            
+            <button type="button" class="form-btn btn-save" onclick="guardarCinete()">Guardar</button>
+
+        </form>
+    </section>
+
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sistema de Cliente</p>
+        </div>
+    </footer>
+</body>
+</html>
+
